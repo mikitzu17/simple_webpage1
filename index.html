@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Page</title>
+    <!-- CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #6200ea;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        main {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 1rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #6200ea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #3700b3;
+        }
+
+        .output {
+            margin-top: 2rem;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: white;
+            display: inline-block;
+            width: 300px;
+            text-align: center;
+        }
+
+        footer {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #6200ea;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Interactive Web Page</h1>
+    </header>
+
+    <main>
+        <p>Click the buttons below to interact with the page:</p>
+        
+        <button class="btn" onclick="showMessage()">Show Message</button>
+        <button class="btn" onclick="changeColor()">Change Background</button>
+
+        <div id="output" class="output">Output will appear here</div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Interactive Web Page</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Function to show a message in the output div
+        function showMessage() {
+            const output = document.getElementById('output');
+            output.textContent = 'Hello, welcome to the interactive page!';
+        }
+
+        // Function to change the background color of the page
+        function changeColor() {
+            const colors = ['#ffcccb', '#d1c4e9', '#c8e6c9', '#ffecb3', '#b3e5fc'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+</body>
+</html>
